@@ -27,3 +27,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore directories for daily + init batches
+/api/batch-daily/*
+!/api/batch-daily/.keep
+/api/batch-init/*
+!/api/batch-init/.keep
