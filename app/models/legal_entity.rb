@@ -1,13 +1,12 @@
 # frozen_string_literal: true
-class LegalEntity < ApplicationRecord
 
+class LegalEntity < ApplicationRecord
   has_many :addresses
 
-  # has_many :activities
-
   validates :ico, presence: true, uniqueness: true
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  # dopisane , allow_blank: true do mena + periezviska na zaklade chyby
+  validates :first_name, presence: true, allow_blank: true
+  validates :last_name, presence: true, allow_blank: true
   validates :entity_name, presence: true
 
 

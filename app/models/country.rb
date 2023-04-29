@@ -1,5 +1,7 @@
 # frozen_string_literal: true
+
 class Country < ApplicationRecord
+
   #namapovanie mena tabulky na model
   self.table_name = "countries"
 
