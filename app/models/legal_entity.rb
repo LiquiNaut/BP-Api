@@ -8,7 +8,4 @@ class LegalEntity < ApplicationRecord
   validates :first_name, presence: true, allow_blank: true
   validates :last_name, presence: true, allow_blank: true
   validates :entity_name, presence: true
-
-
 end
-
