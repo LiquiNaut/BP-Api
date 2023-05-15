@@ -39,12 +39,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_22_143454) do
 
   create_table "legal_entities", force: :cascade do |t|
     t.string "ico"
-    t.string "dic"
+    t.string "dic_icdph"
+    t.string "ic_dph"
     t.string "first_name"
     t.string "last_name"
     t.string "entity_name"
-    t.datetime "valid_from"
-    t.datetime "valid_to"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -11,11 +11,12 @@ class TableInit < ActiveRecord::Migration[7.0]
     create_table :legal_entities do |t|
       t.string :ico
       t.string :dic
+      t.string :ic_dph
       t.string :first_name
       t.string :last_name
       t.string :entity_name #nazov firmy
-      t.datetime :valid_from
-      t.datetime :valid_to
+      # t.datetime :valid_from
+      # t.datetime :valid_to
 
       t.timestamps
     end
