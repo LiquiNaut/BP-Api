@@ -6,4 +6,9 @@ Rails.application.routes.draw do
   require "sidekiq/web"
   require 'sidekiq/cron/web'
   mount Sidekiq::Web => "/sidekiq"
+
+  namespace :api, defaults: { format: :json }, constraints: { format: 'json' } do
+    get :search, to: 'search#search'
+    get :tax_rep, to: 'search#tax_rep'
+  end
 end
