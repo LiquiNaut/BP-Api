@@ -12,6 +12,7 @@ Bundler.require(*Rails.groups)
 module Api
   class Application < Rails::Application
 
+    config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'] || 'redis://localhost:6379/0' }
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
