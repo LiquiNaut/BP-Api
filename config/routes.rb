@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json }, constraints: { format: 'json' } do
     get :search, to: 'search#search'
     get :tax_rep, to: 'search#tax_rep'
+    get :search_by_name, to: 'search#search_by_name'
   end
 end

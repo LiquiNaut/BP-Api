@@ -11,5 +11,12 @@ module Api
 
       render json: @entity, include: [addresses: {include: [:country, :municipality]}]
     end
+
+    def search_by_name
+      @entities = LegalEntity.where("CONCAT(first_name, ' ', last_name) ILIKE :search OR entity_name ILIKE :search", search: "%#{params[:search]}%").limit(10)
+
+      render json: @entities, include: [addresses: {include: [:country, :municipality]}]
+    end
+
   end
 end
