@@ -6,6 +6,8 @@ class RpoBatchInit
   require 'zlib'
   require 'fileutils'
   require 'date'
+  require 'zip'
+  require 'nokogiri'
 
   # require 'byebug'
 
@@ -37,41 +39,41 @@ class RpoBatchInit
 
       # BATCH INIT - DOWNLOAD
       #
-      # (1..21).each do |i|
-      #   logfile.puts "DOWNLOADING BATCH INIT #{i} - TIME: #{Time.now.strftime('%H:%M:%S')}"
-      #   logfile.flush
-      #
-      #   file_number = format('%03d', i) # Formátuj číslo súboru na 3 číslice s nulami
-      #   url = "https://frkqbrydxwdp.compat.objectstorage.eu-frankfurt-1.oraclecloud.com/susr-rpo/batch-init/init_#{first_saturday}_#{file_number}.json.gz"
-      #
-      #   compressed_file = "#{directory_name}/#{first_saturday}_#{file_number}.json.gz"
-      #   output_file = "#{directory_name}/#{first_saturday}_#{file_number}.json"
-      #
-      #   # Stiahnutie súboru
-      #   File.open(compressed_file, 'wb') do |local_file|
-      #     URI.open(url, 'rb', :content_length_proc => lambda { |content_length| }) do |remote_file|
-      #       while (buffer = remote_file.read(buffer_size))
-      #         local_file.write(buffer)
-      #       end
-      #     end
-      #   end
-      #
-      #   # Dekompresia súboru
-      #   Zlib::GzipReader.open(compressed_file) do |gz|
-      #     File.open(output_file, 'wb') do |file|
-      #       file.write(gz.read)
-      #     end
-      #   end
-      #
-      #   # Zmazanie komprimovaných suborov
-      #   # File.delete(compressed_file)
-      #
-      #   logfile.puts "Súbor č. #{file_number} bol úspešne stiahnutý, dekompresovaný a uložený ako #{output_file} - TIME: #{Time.now.strftime('%H:%M:%S')}"
-      #   logfile.flush
-      # end
+      (1..21).each do |i|
+        logfile.puts "DOWNLOADING BATCH INIT #{i} - TIME: #{Time.now.strftime('%H:%M:%S')}"
+        logfile.flush
 
-      # BATCH INIT - PARSER
-      #
+        file_number = format('%03d', i) # Formátuj číslo súboru na 3 číslice s nulami
+        url = "https://frkqbrydxwdp.compat.objectstorage.eu-frankfurt-1.oraclecloud.com/susr-rpo/batch-init/init_#{first_saturday}_#{file_number}.json.gz"
+
+        compressed_file = "#{directory_name}/#{first_saturday}_#{file_number}.json.gz"
+        output_file = "#{directory_name}/#{first_saturday}_#{file_number}.json"
+
+        # Stiahnutie súboru
+        File.open(compressed_file, 'wb') do |local_file|
+          URI.open(url, 'rb', :content_length_proc => lambda { |content_length| }) do |remote_file|
+            while (buffer = remote_file.read(buffer_size))
+              local_file.write(buffer)
+            end
+          end
+        end
+
+        # Dekompresia súboru
+        Zlib::GzipReader.open(compressed_file) do |gz|
+          File.open(output_file, 'wb') do |file|
+            file.write(gz.read)
+          end
+        end
+
+        # Zmazanie komprimovaných suborov
+        # File.delete(compressed_file)
+
+        logfile.puts "Súbor č. #{file_number} bol úspešne stiahnutý, dekompresovaný a uložený ako #{output_file} - TIME: #{Time.now.strftime('%H:%M:%S')}"
+        logfile.flush
+      end
+
+      #BATCH INIT - PARSER
+
       (1..21).each do |fileNum|
         logfile.puts "PARSING BATCH INIT #{fileNum} - TIME: #{Time.now.strftime('%H:%M:%S')}"
         logfile.flush
@@ -98,7 +100,6 @@ class RpoBatchInit
             ico: ico,
             first_name: result.dig("statutoryBodies", 0, "personName", "givenNames")&.join(" "),
             last_name: result.dig("statutoryBodies", 0, "personName", "familyNames")&.join(" "),
-            valid_from: result.dig("identifiers", 0, "validFrom")&.to_date,
             entity_name: result.dig("fullNames", 0, "value")
           }
 
@@ -134,7 +135,7 @@ class RpoBatchInit
         end
 
         # Bulk insert legal_entities_data
-        imported_legal_entities = LegalEntity.import legal_entities_data, validate: true, on_duplicate_key_update: [:first_name, :last_name, :valid_from, :entity_name], returning: [:id, :ico]
+        imported_legal_entities = LegalEntity.import legal_entities_data, validate: true, on_duplicate_key_update: [:first_name, :last_name, :entity_name], returning: [:id, :ico]
 
         # Map ICOs to LegalEntity IDs
         ico_to_legal_entity_id = imported_legal_entities.results.map { |result| [result[1], result[0]] }.to_h
@@ -149,6 +150,7 @@ class RpoBatchInit
 
       end
 
+      # -----------------------------------------------------------------------
       # DAILY BATHCES
       #
       # dotiahnutie zvysku daily batchov po aktualny den
@@ -226,7 +228,6 @@ class RpoBatchInit
             ico: ico,
             first_name: result.dig("statutoryBodies", 0, "personName", "givenNames")&.join(" "),
             last_name: result.dig("statutoryBodies", 0, "personName", "familyNames")&.join(" "),
-            valid_from: result.dig("identifiers", 0, "validFrom")&.to_date,
             entity_name: result.dig("fullNames", 0, "value")
           }
 
@@ -262,7 +263,7 @@ class RpoBatchInit
         end
 
         # Bulk insert legal_entities_data
-        imported_legal_entities = LegalEntity.import legal_entities_data, validate: true, on_duplicate_key_update: [:first_name, :last_name, :valid_from, :entity_name], returning: [:id, :ico]
+        imported_legal_entities = LegalEntity.import legal_entities_data, validate: true, on_duplicate_key_update: [:first_name, :last_name, :entity_name], returning: [:id, :ico]
 
         # Map ICOs to LegalEntity IDs
         ico_to_legal_entity_id = imported_legal_entities.results.map { |result| [result[1], result[0]] }.to_h
@@ -276,7 +277,171 @@ class RpoBatchInit
         Address.import addresses_data, validate: true
 
       end
-      # end
+
+      # -------------------------------------------------------------------------------------
+      # DIC
+      directory_name = "dic_icdph"
+      FileUtils.mkdir_p(directory_name)
+
+      formatted_date = Date.today.strftime('%Y-%m-%d')
+      url = "https://report.financnasprava.sk/ds_dsrdp.zip"
+
+      compressed_file = "#{directory_name}/ds_dsrdp_#{formatted_date}.zip"
+
+      # Stiahnutie súboru
+      File.open(compressed_file, 'wb') do |local_file|
+        URI.open(url, 'rb', :content_length_proc => lambda { |content_length| }) do |remote_file|
+          local_file.write(remote_file.read)
+        end
+      end
+
+      logfile.puts "Súbor:ds_dsrdp_#{formatted_date} úspešne stiahnutý- TIME: #{Time.now.strftime('%H:%M:%S')}"
+
+      # Extrahovanie XML súboru z ZIP archívu
+      xml_file = nil
+      Zip::File.open(compressed_file) do |zip_file|
+        zip_file.each do |entry|
+          if entry.name.downcase.end_with?('.xml')
+            entry.extract("#{directory_name}/#{entry.name}")
+            xml_file = "#{directory_name}/#{entry.name}"
+            break
+          end
+        end
+      end
+
+      if xml_file.nil?
+        puts "Nepodarilo sa nájsť XML súbor v ZIP archíve."
+        exit
+      end
+
+      logfile.puts "Úspešne extrahovaný DIC XML súbor: #{xml_file} - TIME: #{Time.now.strftime('%H:%M:%S')}"
+
+      # Načítanie XML súboru
+      xml_data = File.read(xml_file)
+      doc = Nokogiri::XML(xml_data)
+
+      # Vyberanie elementov <ITEM>
+      items = doc.xpath('//ITEM')
+
+      # Získanie množiny unikátnych ICO zo všetkých elementov <ICO>
+      unique_icos = items.map { |item| item.at_xpath('./ICO')&.text }.compact.uniq
+
+      # Načítanie iba potrebných záznamov LegalEntity a vytvorenie mapy
+      legal_entities_map = LegalEntity.where(ico: unique_icos).index_by(&:ico)
+
+      # Priprava údajov pre bulk import
+      legal_entities_data = []
+
+      items.each do |item|
+        dic_element = item.at_xpath('./DIC')
+        ico_element = item.at_xpath('./ICO')
+
+        next unless dic_element && ico_element
+
+        # Vyhľadanie existujúceho LegalEntity záznamu na základe zhody ico
+        legal_entity = legal_entities_map[ico_element.text]
+
+        next unless legal_entity
+
+        # Pridanie hodnôt do legal_entities_data
+        legal_entities_data << {
+          id: legal_entity.id,
+          dic: dic_element.text
+        }
+      end
+
+      # Odfiltrovanie duplicitných záznamov
+      legal_entities_data.uniq! { |item| item[:id] }
+
+      # Bulk update legal_entities_data pomocou upsert_all
+      LegalEntity.upsert_all(legal_entities_data, unique_by: :id)
+
+
+      logfile.puts "Úspešne aktualizované hodnoty z elementov <DIC> a <NAZOV_DS> v tabuľke legal_entities. - TIME: #{Time.now.strftime('%H:%M:%S')}"
+
+      # -----------------------------------------------------------------------
+      # IC_DPH
+      directory_name = "dic_icdph"
+      FileUtils.mkdir_p(directory_name)
+
+      formatted_date = Date.today.strftime('%Y-%m-%d')
+      url = "https://report.financnasprava.sk/ds_dphs.zip"
+
+      compressed_file = "#{directory_name}/ds_dphs_#{formatted_date}.zip"
+
+      # Stiahnutie súboru
+      File.open(compressed_file, 'wb') do |local_file|
+        URI.open(url, 'rb', :content_length_proc => lambda { |content_length| }) do |remote_file|
+          local_file.write(remote_file.read)
+        end
+      end
+
+      puts "Súbor úspešne stiahnutý do: #{compressed_file}"
+
+      # Extrahovanie XML súboru zo stiahnutého .zip súboru
+      xml_file = nil
+      Zip::File.open(compressed_file) do |zip_file|
+        zip_file.each do |entry|
+          next unless entry.name.end_with?('.xml')
+
+          entry.extract("#{directory_name}/#{entry.name}")
+          xml_file = "#{directory_name}/#{entry.name}"
+          break
+        end
+      end
+
+      if xml_file.nil?
+        puts "Nenašiel sa žiadny XML súbor v stiahnutom .zip súbore."
+        exit
+      end
+
+      logfile.puts "Úspešne extrahovaný IC_DPH XML súbor: #{xml_file} - TIME: #{Time.now.strftime('%H:%M:%S')}"
+
+
+      # Načítanie XML súboru
+      xml_data = File.read(xml_file)
+      doc = Nokogiri::XML(xml_data)
+
+      # Vyberanie elementov <ITEM>
+      items = doc.xpath('//ITEM')
+
+      # Získanie množiny unikátnych ICO zo všetkých elementov <ICO>
+      unique_icos = items.map { |item| item.at_xpath('./ICO')&.text }.compact.uniq
+
+      # Načítanie iba potrebných záznamov LegalEntity a vytvorenie mapy
+      legal_entities_map = LegalEntity.where(ico: unique_icos).index_by(&:ico)
+
+      # Priprava údajov pre bulk import
+      legal_entities_data = []
+
+      items.each do |item|
+        ic_dph_element = item.at_xpath('./IC_DPH')
+        ico_element = item.at_xpath('./ICO')
+
+        next unless ic_dph_element && ico_element
+
+        # Vyhľadanie existujúceho LegalEntity záznamu na základe zhody ico
+        legal_entity = legal_entities_map[ico_element.text]
+
+        next unless legal_entity
+
+        # Pridanie hodnôt do legal_entities_data
+        legal_entities_data << {
+          id: legal_entity.id,
+          ic_dph: ic_dph_element.text
+        }
+      end
+
+      # Odfiltrovanie duplicitných záznamov
+      legal_entities_data.uniq! { |item| item[:id] }
+
+      # Bulk update legal_entities_data pomocou upsert_all
+      LegalEntity.upsert_all(legal_entities_data, unique_by: :id)
+
+      logfile.puts "Úspešne aktualizované hodnoty z elementov <IC_DPH> a <ICO> v tabuľke legal_entities. - TIME: #{Time.now.strftime('%H:%M:%S')}"
+
+      # -----------------------------------------------------------------------
+
       logfile.puts "DONE - TIME: #{Time.now.strftime('%H:%M:%S')}"
       logfile.close
     end
