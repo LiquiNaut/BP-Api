@@ -146,7 +146,7 @@ class RpoBatchInit
         end
 
         # Bulk insert addresses_data
-        Address.import addresses_data, validate: true
+        Address.import addresses_data, validate: true, on_duplicate_key_update: [:postal_code, :street, :reg_number, :building_number, :country_id, :municipality_id, :legal_entity_id]
 
       end
 
@@ -274,7 +274,7 @@ class RpoBatchInit
         end
 
         # Bulk insert addresses_data
-        Address.import addresses_data, validate: true
+        Address.import addresses_data, validate: true, on_duplicate_key_update: [:postal_code, :street, :reg_number, :building_number, :country_id, :municipality_id, :legal_entity_id]
 
       end
 

@@ -1,84 +1,93 @@
-DOWNLOADING BATCH INIT 1 - TIME: 02:45:59
-Súbor č. 001 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_001.json - TIME: 02:46:14
-DOWNLOADING BATCH INIT 2 - TIME: 02:46:14
-Súbor č. 002 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_002.json - TIME: 02:46:21
-DOWNLOADING BATCH INIT 3 - TIME: 02:46:21
-Súbor č. 003 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_003.json - TIME: 02:46:24
-DOWNLOADING BATCH INIT 4 - TIME: 02:46:24
-Súbor č. 004 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_004.json - TIME: 02:46:27
-DOWNLOADING BATCH INIT 5 - TIME: 02:46:27
-Súbor č. 005 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_005.json - TIME: 02:46:30
-DOWNLOADING BATCH INIT 6 - TIME: 02:46:30
-Súbor č. 006 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_006.json - TIME: 02:46:34
-DOWNLOADING BATCH INIT 7 - TIME: 02:46:34
-Súbor č. 007 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_007.json - TIME: 02:46:37
-DOWNLOADING BATCH INIT 8 - TIME: 02:46:37
-Súbor č. 008 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_008.json - TIME: 02:46:40
-DOWNLOADING BATCH INIT 9 - TIME: 02:46:40
-Súbor č. 009 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_009.json - TIME: 02:46:42
-DOWNLOADING BATCH INIT 10 - TIME: 02:46:42
-Súbor č. 010 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_010.json - TIME: 02:46:46
-DOWNLOADING BATCH INIT 11 - TIME: 02:46:46
-Súbor č. 011 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_011.json - TIME: 02:46:50
-DOWNLOADING BATCH INIT 12 - TIME: 02:46:50
-Súbor č. 012 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_012.json - TIME: 02:46:53
-DOWNLOADING BATCH INIT 13 - TIME: 02:46:53
-Súbor č. 013 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_013.json - TIME: 02:46:56
-DOWNLOADING BATCH INIT 14 - TIME: 02:46:56
-Súbor č. 014 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_014.json - TIME: 02:46:59
-DOWNLOADING BATCH INIT 15 - TIME: 02:46:59
-Súbor č. 015 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_015.json - TIME: 02:47:02
-DOWNLOADING BATCH INIT 16 - TIME: 02:47:02
-Súbor č. 016 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_016.json - TIME: 02:47:05
-DOWNLOADING BATCH INIT 17 - TIME: 02:47:05
-Súbor č. 017 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_017.json - TIME: 02:47:08
-DOWNLOADING BATCH INIT 18 - TIME: 02:47:08
-Súbor č. 018 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_018.json - TIME: 02:47:11
-DOWNLOADING BATCH INIT 19 - TIME: 02:47:11
-Súbor č. 019 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_019.json - TIME: 02:47:14
-DOWNLOADING BATCH INIT 20 - TIME: 02:47:14
-Súbor č. 020 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_020.json - TIME: 02:47:16
-DOWNLOADING BATCH INIT 21 - TIME: 02:47:16
-Súbor č. 021 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_021.json - TIME: 02:47:17
-PARSING BATCH INIT 1 - TIME: 02:47:17
-PARSING BATCH INIT 2 - TIME: 03:00:38
-PARSING BATCH INIT 3 - TIME: 03:15:39
-PARSING BATCH INIT 4 - TIME: 03:27:21
-PARSING BATCH INIT 5 - TIME: 03:36:53
-PARSING BATCH INIT 6 - TIME: 03:45:49
-PARSING BATCH INIT 7 - TIME: 03:54:40
-PARSING BATCH INIT 8 - TIME: 04:03:27
-PARSING BATCH INIT 9 - TIME: 04:11:55
-PARSING BATCH INIT 10 - TIME: 04:19:59
-PARSING BATCH INIT 11 - TIME: 04:27:56
-PARSING BATCH INIT 12 - TIME: 04:36:48
-PARSING BATCH INIT 13 - TIME: 04:45:50
-PARSING BATCH INIT 14 - TIME: 04:54:52
-PARSING BATCH INIT 15 - TIME: 05:03:50
-PARSING BATCH INIT 16 - TIME: 05:13:01
-PARSING BATCH INIT 17 - TIME: 05:22:03
-PARSING BATCH INIT 18 - TIME: 05:30:34
-PARSING BATCH INIT 19 - TIME: 05:38:43
-PARSING BATCH INIT 20 - TIME: 05:46:42
-PARSING BATCH INIT 21 - TIME: 05:54:02
-DOWNLOADING DAILY BATCH: 2023-05-06 - TIME: 05:55:37
-PARSING DAILY BATCH: 2023-05-06 - TIME: 05:55:39
-DOWNLOADING DAILY BATCH: 2023-05-07 - TIME: 05:55:49
-PARSING DAILY BATCH: 2023-05-07 - TIME: 05:55:49
-DOWNLOADING DAILY BATCH: 2023-05-08 - TIME: 05:55:50
-PARSING DAILY BATCH: 2023-05-08 - TIME: 05:55:50
-DOWNLOADING DAILY BATCH: 2023-05-09 - TIME: 05:55:50
-PARSING DAILY BATCH: 2023-05-09 - TIME: 05:55:51
-DOWNLOADING DAILY BATCH: 2023-05-10 - TIME: 05:55:51
-PARSING DAILY BATCH: 2023-05-10 - TIME: 05:55:52
-DOWNLOADING DAILY BATCH: 2023-05-11 - TIME: 05:56:02
-PARSING DAILY BATCH: 2023-05-11 - TIME: 05:56:05
-DOWNLOADING DAILY BATCH: 2023-05-12 - TIME: 05:56:40
-PARSING DAILY BATCH: 2023-05-12 - TIME: 05:56:43
-
-Súbor:ds_dsrdp_2023-05-12 úspešne stiahnutý- TIME: 07:49:04
-Úspešne extrahovaný DIC XML súbor: dic_icdph/ds_dsrdp.xml - TIME: 07:49:18
-Úspešne aktualizované hodnoty z elementov <DIC> a <NAZOV_DS> v tabuľke legal_entities. - TIME: 08:02:10
-Úspešne extrahovaný IC_DPH XML súbor: dic_icdph/ds_dphs.xml - TIME: 08:02:24
-Úspešne aktualizované hodnoty z elementov <IC_DPH> a <ICO> v tabuľke legal_entities. - TIME: 08:05:42
-DONE - TIME: 08:05:42
+DOWNLOADING BATCH INIT 1 - TIME: 01:58:39
+Súbor č. 001 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_001.json - TIME: 01:58:48
+DOWNLOADING BATCH INIT 2 - TIME: 01:58:48
+Súbor č. 002 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_002.json - TIME: 01:58:58
+DOWNLOADING BATCH INIT 3 - TIME: 01:58:58
+Súbor č. 003 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_003.json - TIME: 01:59:01
+DOWNLOADING BATCH INIT 4 - TIME: 01:59:01
+Súbor č. 004 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_004.json - TIME: 01:59:04
+DOWNLOADING BATCH INIT 5 - TIME: 01:59:04
+Súbor č. 005 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_005.json - TIME: 01:59:07
+DOWNLOADING BATCH INIT 6 - TIME: 01:59:07
+Súbor č. 006 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_006.json - TIME: 01:59:11
+DOWNLOADING BATCH INIT 7 - TIME: 01:59:11
+Súbor č. 007 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_007.json - TIME: 01:59:15
+DOWNLOADING BATCH INIT 8 - TIME: 01:59:15
+Súbor č. 008 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_008.json - TIME: 01:59:18
+DOWNLOADING BATCH INIT 9 - TIME: 01:59:18
+Súbor č. 009 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_009.json - TIME: 01:59:21
+DOWNLOADING BATCH INIT 10 - TIME: 01:59:21
+Súbor č. 010 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_010.json - TIME: 01:59:24
+DOWNLOADING BATCH INIT 11 - TIME: 01:59:24
+Súbor č. 011 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_011.json - TIME: 01:59:28
+DOWNLOADING BATCH INIT 12 - TIME: 01:59:28
+Súbor č. 012 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_012.json - TIME: 01:59:31
+DOWNLOADING BATCH INIT 13 - TIME: 01:59:31
+Súbor č. 013 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_013.json - TIME: 01:59:34
+DOWNLOADING BATCH INIT 14 - TIME: 01:59:34
+Súbor č. 014 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_014.json - TIME: 01:59:38
+DOWNLOADING BATCH INIT 15 - TIME: 01:59:38
+Súbor č. 015 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_015.json - TIME: 01:59:41
+DOWNLOADING BATCH INIT 16 - TIME: 01:59:41
+Súbor č. 016 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_016.json - TIME: 01:59:45
+DOWNLOADING BATCH INIT 17 - TIME: 01:59:45
+Súbor č. 017 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_017.json - TIME: 01:59:48
+DOWNLOADING BATCH INIT 18 - TIME: 01:59:48
+Súbor č. 018 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_018.json - TIME: 01:59:51
+DOWNLOADING BATCH INIT 19 - TIME: 01:59:51
+Súbor č. 019 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_019.json - TIME: 01:59:54
+DOWNLOADING BATCH INIT 20 - TIME: 01:59:54
+Súbor č. 020 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_020.json - TIME: 01:59:56
+DOWNLOADING BATCH INIT 21 - TIME: 01:59:56
+Súbor č. 021 bol úspešne stiahnutý, dekompresovaný a uložený ako batch-init/2023-05-06_021.json - TIME: 01:59:57
+PARSING BATCH INIT 1 - TIME: 01:59:57
+PARSING BATCH INIT 2 - TIME: 02:15:02
+PARSING BATCH INIT 3 - TIME: 02:32:02
+PARSING BATCH INIT 4 - TIME: 02:45:14
+PARSING BATCH INIT 5 - TIME: 02:56:12
+PARSING BATCH INIT 6 - TIME: 03:06:46
+PARSING BATCH INIT 7 - TIME: 03:16:44
+PARSING BATCH INIT 8 - TIME: 03:27:15
+PARSING BATCH INIT 9 - TIME: 03:37:11
+PARSING BATCH INIT 10 - TIME: 03:46:40
+PARSING BATCH INIT 11 - TIME: 03:56:11
+PARSING BATCH INIT 12 - TIME: 04:06:20
+PARSING BATCH INIT 13 - TIME: 04:16:34
+PARSING BATCH INIT 14 - TIME: 04:26:28
+PARSING BATCH INIT 15 - TIME: 04:36:45
+PARSING BATCH INIT 16 - TIME: 04:47:01
+PARSING BATCH INIT 17 - TIME: 04:57:16
+PARSING BATCH INIT 18 - TIME: 05:07:55
+PARSING BATCH INIT 19 - TIME: 05:18:16
+PARSING BATCH INIT 20 - TIME: 05:28:10
+PARSING BATCH INIT 21 - TIME: 05:37:04
+DOWNLOADING DAILY BATCH: 2023-05-06 - TIME: 05:39:00
+PARSING DAILY BATCH: 2023-05-06 - TIME: 05:39:01
+DOWNLOADING DAILY BATCH: 2023-05-07 - TIME: 05:39:11
+PARSING DAILY BATCH: 2023-05-07 - TIME: 05:39:12
+DOWNLOADING DAILY BATCH: 2023-05-08 - TIME: 05:39:12
+PARSING DAILY BATCH: 2023-05-08 - TIME: 05:39:13
+DOWNLOADING DAILY BATCH: 2023-05-09 - TIME: 05:39:13
+PARSING DAILY BATCH: 2023-05-09 - TIME: 05:39:14
+DOWNLOADING DAILY BATCH: 2023-05-10 - TIME: 05:39:14
+PARSING DAILY BATCH: 2023-05-10 - TIME: 05:39:15
+DOWNLOADING DAILY BATCH: 2023-05-11 - TIME: 05:39:27
+PARSING DAILY BATCH: 2023-05-11 - TIME: 05:39:29
+DOWNLOADING DAILY BATCH: 2023-05-12 - TIME: 05:40:12
+PARSING DAILY BATCH: 2023-05-12 - TIME: 05:40:14
+DOWNLOADING DAILY BATCH: 2023-05-13 - TIME: 05:41:26
+PARSING DAILY BATCH: 2023-05-13 - TIME: 05:41:27
+DOWNLOADING DAILY BATCH: 2023-05-14 - TIME: 05:41:40
+PARSING DAILY BATCH: 2023-05-14 - TIME: 05:41:40
+DOWNLOADING DAILY BATCH: 2023-05-15 - TIME: 05:41:41
+PARSING DAILY BATCH: 2023-05-15 - TIME: 05:41:41
+DOWNLOADING DAILY BATCH: 2023-05-16 - TIME: 05:41:43
+PARSING DAILY BATCH: 2023-05-16 - TIME: 05:41:44
+DOWNLOADING DAILY BATCH: 2023-05-17 - TIME: 05:41:59
+PARSING DAILY BATCH: 2023-05-17 - TIME: 05:42:00
+Súbor:ds_dsrdp_2023-05-17 úspešne stiahnutý- TIME: 05:42:17
+Úspešne extrahovaný DIC XML súbor: dic_icdph/ds_dsrdp.xml - TIME: 05:42:44
+Úspešne aktualizované hodnoty z elementov <DIC> a <NAZOV_DS> v tabuľke legal_entities. - TIME: 05:57:12
+Úspešne extrahovaný IC_DPH XML súbor: dic_icdph/ds_dphs.xml - TIME: 05:57:23
+Úspešne aktualizované hodnoty z elementov <IC_DPH> a <ICO> v tabuľke legal_entities. - TIME: 06:00:58
+DONE - TIME: 06:00:58
