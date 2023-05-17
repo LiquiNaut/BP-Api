@@ -140,7 +140,7 @@ class RpoBatchInit
         # Map ICOs to LegalEntity IDs
         ico_to_legal_entity_id = imported_legal_entities.results.map { |result| [result[1], result[0]] }.to_h
 
-        # Update legal_entity_id in addresses_data
+        # Update legal_entity_id in addresses_dataa
         addresses_data.each do |address_data|
           address_data[:legal_entity_id] = ico_to_legal_entity_id[address_data[:legal_entity_id]]
         end
