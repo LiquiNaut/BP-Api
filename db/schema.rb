@@ -31,15 +31,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_22_143454) do
 
   create_table "countries", force: :cascade do |t|
     t.string "codelist_code"
-    t.string "code"
+    t.integer "code"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "legal_entities", force: :cascade do |t|
-    t.string "ico"
-    t.string "dic_icdph"
+    t.integer "ico"
+    t.integer "dic"
     t.string "ic_dph"
     t.string "first_name"
     t.string "last_name"
