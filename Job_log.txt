@@ -1,0 +1,7 @@
+DOWNLOADING DAILY BATCH: 2023-06-08 - TIME: 10:42:12
+PARSING DAILY BATCH: 2023-06-08 - TIME: 10:42:13
+Súbor:ds_dsrdp_2023-06-08 úspešne stiahnutý- TIME: 10:42:22
+Úspešne extrahovaný DIC XML súbor: dic_icdph/ds_dsrdp_2023-06-08.xml - TIME: 10:42:25
+Úspešne aktualizované hodnoty z elementov <DIC> a <NAZOV_DS> v tabuľke legal_entities. - TIME: 10:55:14
+Úspešne extrahovaný IC_DPH XML súbor: dic_icdph/ds_dphs_2023-06-08.xml - TIME: 10:55:32
+Úspešne aktualizované hodnoty z elementov <IC_DPH> a <ICO> v tabuľke legal_entities. - TIME: 10:59:03
