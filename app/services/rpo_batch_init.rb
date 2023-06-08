@@ -302,8 +302,9 @@ class RpoBatchInit
       Zip::File.open(compressed_file) do |zip_file|
         zip_file.each do |entry|
           if entry.name.downcase.end_with?('.xml')
-            entry.extract("#{directory_name}/#{entry.name}")
-            xml_file = "#{directory_name}/#{entry.name}"
+            new_filename = "#{directory_name}/#{entry.name.chomp('.xml')}_#{formatted_date}.xml"
+            entry.extract(new_filename)
+            xml_file = new_filename
             break
           end
         end
@@ -382,11 +383,12 @@ class RpoBatchInit
       xml_file = nil
       Zip::File.open(compressed_file) do |zip_file|
         zip_file.each do |entry|
-          next unless entry.name.end_with?('.xml')
-
-          entry.extract("#{directory_name}/#{entry.name}")
-          xml_file = "#{directory_name}/#{entry.name}"
-          break
+          if entry.name.downcase.end_with?('.xml')
+            new_filename = "#{directory_name}/#{entry.name.chomp('.xml')}_#{formatted_date}.xml"
+            entry.extract(new_filename)
+            xml_file = new_filename
+            break
+          end
         end
       end
 
