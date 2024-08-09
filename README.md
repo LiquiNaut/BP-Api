@@ -1,24 +1,3 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+BP-Api je API implementované v Ruby jazyku s použitím Rails frameworku. Projekt používa lokálnu PostgreSQL databázu pre ukladanie dát a Redis pre aktívne vykonávanie cron úloh.
