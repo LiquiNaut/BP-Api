@@ -1,3 +1,3 @@
 # README
 
-BP-Api je API implementované v Ruby jazyku s použitím Rails frameworku. Projekt používa lokálnu PostgreSQL databázu pre ukladanie dát a Redis pre aktívne vykonávanie cron úloh.
+BP-Api is a repository for an API implemented in Ruby language using Rails framework. The project uses a local PostgreSQL database for data storage and Redis for active execution of cron jobs.
